@@ -66,10 +66,10 @@ export default function () {
     setIsLoading(false);
     setError(false);
      //Name
-     if (!itemNumber && !type) {
+     if (itemNumber.length === 0 && type.length === 0) {
       console.log("here");
       setError(true);
-      setErrorValue("Item number cannot be empty");
+      setErrorValue("Item number or type selection cannot be empty");
     }else{
       const searchData = {
         search,
