@@ -66,7 +66,7 @@ export default function () {
     setIsLoading(false);
     setError(false);
      //Name
-     if (itemNumber === "" && type.length < 0) {
+     if (!itemNumber) {
       console.log("here");
       setError(true);
       setErrorValue("Item number cannot be empty");
